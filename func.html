@@ -150,14 +150,36 @@
 </head>
 <body>
 <h1 id="function-descriptors-for-sequence-diagram">Function Descriptors for Sequence Diagram</h1>
+<h3 id="a-client-side">A Client-side</h3>
 <ol type="1">
-<li><code>&lt;file action&gt;</code> = {read(file), write(file, string), modify(file, string), delete(file)}</li>
-<li><code>&lt;async. msg. 1&gt;</code> = BCStatus()</li>
-<li><code>&lt;file hash&gt;</code> = (IPFS generated function creating a hash)</li>
-<li><code>&lt;generateID&gt;</code> = generateID(position, IPFS key) : returns public &amp; private key</li>
-<li><code>&lt;sendHash&gt;</code> = sendHash(file, clientID)</li>
-<li><code>&lt;file transaction&gt;</code> = transaction(fileHash, public key) : returns file hash, private key</li>
-<li><code>&lt;AutoDoc&gt;</code> = (mimics the concept of sent reciepts in order to avoid client communication with the blockchain)</li>
+<li><code>&lt;file action&gt; = {read(file), write(file, string), modify(file, string), delete(file)}</code>:</li>
 </ol>
+<p>This is the only function executed by the client. It is a class of functions which allow for file manipulation straight to IPFS. Different file functionscan be added as needed. Only the basic four will be created as of now.</p>
+<h3 id="b-ipfs-network">B IPFS Network</h3>
+<ol start="2" type="1">
+<li><code>&lt;async msg&gt; = BCStatus()</code>:</li>
+</ol>
+<p>This function sends a TCP request to the private ETH network to find out information on gas and block-time. If block-time and gas are significantly greater than the average, the file request waits.</p>
+<ol start="3" type="1">
+<li><code>&lt;file hash&gt; = IPFS()</code>:</li>
+</ol>
+<p>IPFS generated function creating a hash distinct to each file.</p>
+<ol start="4" type="1">
+<li><code>&lt;sendHash&gt; = sendHash(file, clientID)</code>:</li>
+</ol>
+<p>This function pushes the same hash sent to the user but forwards it to the blockchain to be dealt with using the DApp.</p>
+<h3 id="c-blockchain-network">C Blockchain Network</h3>
+<ol start="5" type="1">
+<li><code>&lt;generateID&gt; = generateID(position, IPFS key) : returns public &amp; private key</code>:</li>
+</ol>
+<p>This function is only called when a new user is introduced and has no public nor private keys on the IPFS and ETH networks.</p>
+<ol start="6" type="1">
+<li><code>&lt;file transaction&gt; = transaction(fileHash, public key) : returns file hash, private key</code>:</li>
+</ol>
+<p>This is essentially the DApp smart contract output (this shall be explained in later docs).</p>
+<ol start="7" type="1">
+<li><code>&lt;AutoDoc&gt;</code>:</li>
+</ol>
+<p>Mimics the concept of sent reciepts in order to avoid client communication with the blockchain to increase user-friendliness.</p>
 </body>
 </html>
