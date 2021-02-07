@@ -3,6 +3,7 @@
 npm must be used to install dependencies. The following commands must be entered into the terminal: 
 
 npm install react-router-dom 
+
 npm install react-bootstrap bootstrap
 
 # Getting Started with Create React App
