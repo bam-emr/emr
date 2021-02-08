@@ -6,30 +6,23 @@ export default class EntryField extends React.Component{
         this.handleChange = this.handleChange.bind(this);
     }
 
-    handleChange(event)
-        {
-        var vars = ['',0];
-        vars[0] = this.props.i; 
-        vars[1] = event.target.value;
-        //alert('A value was submitted:' + vars[0]);
-        this.props.handlChange(vars)
+    handleChange(event){
+        var fieldValue = [this.props.item, event.target.value];
+        //alert('A value was submitted:' + fieldValue[0].id);
+        this.props.handleFormChange(fieldValue)
         }
 
     render(){
-        //const varInputs = this.state.varInputs;
         return(
             <div>         
                 <form> 
                     <label>
-                        {this.props.name}
+                            {this.props.id}
                         <input 
                             type = 'text'
                             onChange= {this.handleChange}
-                            value = {this.props.varInputs[this.props.i].input}
+                            value = {this.props.value}
                         />
-                    </label>
-                    <label>
-                        {' ' + this.props.label} 
                     </label>
                 </form>
             </div>

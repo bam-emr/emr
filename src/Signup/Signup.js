@@ -1,7 +1,9 @@
 import React from "react";
 import EntryField from "./components/EntryField.js";
-import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
+import SelectionStatement from "./components/SelectionStatement.js";
+import Continue from "./components/Continue.js"
+//import { Alert } from "bootstrap";
 
 export default class Signup extends React.Component{
     constructor(props){
@@ -11,21 +13,35 @@ export default class Signup extends React.Component{
                 {id: 'First Name', value: ''},
                 {id: 'Last Name', value: ''},
                 {id: 'Email', value: ''}],
-            role: false
+            role: 0
+        }
+        this.handleClickRole = this.handleClickRole.bind(this);
+        this.handleFormChange = this.handleFormChange.bind(this);
+        //this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleFormChange(fieldValue){
+        let forms = this.state.forms;
+        //alert(forms.fieldValue[0]);
+        forms[forms.indexOf(fieldValue[0])].value = fieldValue[1]
+        this.setState({forms});
+
+        //this.setState({forms});
+    }
+
+    handleClickRole(event){
+        event.preventDefault();
+        if (String(event.target).endsWith("doctor")){
+            let role = this.state.role;
+            role = 1
+            this.setState({role});
+    }
+        else{
+            let role = this.state.role;
+            role = 2
+            this.setState({role});
         }
     }
-
-    createVarField(i){
-      return(
-        <div>
-            <EntryField //below are the props
-              i={i} 
-              handlChange = {(val) => this.handlChange(val)}//{(input) => this.setState({input})}
-            />
-          </div>
-      );
-    }
-
     render(){
         return( 
             <div>
@@ -34,28 +50,34 @@ export default class Signup extends React.Component{
                 <div>
                     {this.state.forms.map(item => (
                         <li key={item.id}>
-                            <form>
-                                <label>
-                                    {item.id}
-                                    <input
-                                        type = 'text'
-                                        onChange = {this.handleChange}
-                                        value = {this.state.forms.value}
-                                    />
-                                </label>
-                            </form>
+                            <EntryField
+                                item = {item}
+                                id = {item.id}
+                                value = {item.value}
+                                handleFormChange = {(fieldValue) => this.handleFormChange(fieldValue)}
+                            />
                         </li>
                     ))}
-                </div>
+                </div>  
                 <Dropdown>
                     <Dropdown.Toggle variant="success" id="dropdown-basic">
                         Select Account Type
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
-                        <Dropdown.Item>Patient</Dropdown.Item>
-                        <Dropdown.Item>Doctor</Dropdown.Item>
+                        <Dropdown.Item href="/patient" onClick={this.handleClickRole}>Patient</Dropdown.Item>
+                        <Dropdown.Item href="/doctor" onClick={this.handleClickRole}>Doctor</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
+                <div>
+                    {this.state.role !== 0 &&
+                        <SelectionStatement
+                            role = {this.state.role}
+                        /> 
+                    }
+                </div>
+                <div>
+                    <Continue/>
+                </div>
             </div>
         );
     }
