@@ -1,5 +1,7 @@
 import React from 'react';
+import './../Signup.css';
 
+//Enables user to enter data (first name, last name, email)
 export default class EntryField extends React.Component{
     constructor(props){
         super(props);
@@ -8,22 +10,24 @@ export default class EntryField extends React.Component{
 
     handleChange(event){
         var fieldValue = [this.props.item, event.target.value];
-        //alert('A value was submitted:' + fieldValue[0].id);
         this.props.handleFormChange(fieldValue)
         }
 
     render(){
         return(
             <div>         
-                <form> 
-                    <label>
+                <form className = "entry-field"> 
+                    <div>
+                        <label>
                             {this.props.id}
-                        <input 
-                            type = 'text'
-                            onChange= {this.handleChange}
-                            value = {this.props.value}
-                        />
-                    </label>
+                        </label>
+                    </div>
+                    <input 
+                        className = "entry-field"
+                        type = 'text'
+                        onChange= {this.handleChange}
+                        value = {this.props.value}
+                    />
                 </form>
             </div>
         )

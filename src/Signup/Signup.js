@@ -3,7 +3,7 @@ import EntryField from "./components/EntryField.js";
 import Dropdown from 'react-bootstrap/Dropdown';
 import SelectionStatement from "./components/SelectionStatement.js";
 import Continue from "./components/Continue.js"
-//import { Alert } from "bootstrap";
+import './Signup.css'
 
 export default class Signup extends React.Component{
     constructor(props){
@@ -44,12 +44,12 @@ export default class Signup extends React.Component{
     }
     render(){
         return( 
-            <div>
-                <h2>Sign Up</h2>
-                <p> Select between signing up as a medical doctor or a patient </p>
+            <div className = "container">
+                <h2 className = "sign-up-text">Sign Up</h2>
+                <p className = "desc"> Select between signing up as a medical doctor or a patient </p>
                 <div>
                     {this.state.forms.map(item => (
-                        <li key={item.id}>
+                        <li key={item.id} className = "forms-list">
                             <EntryField
                                 item = {item}
                                 id = {item.id}
@@ -59,13 +59,13 @@ export default class Signup extends React.Component{
                         </li>
                     ))}
                 </div>  
-                <Dropdown>
-                    <Dropdown.Toggle variant="success" id="dropdown-basic">
-                        Select Account Type
+                <Dropdown className = "dropdown">
+                    <Dropdown.Toggle className ="select-account-button" variant="success" id="dropdown-basic">
+                        <p className = "select-account-text">Select Account Type</p>
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
-                        <Dropdown.Item href="/patient" onClick={this.handleClickRole}>Patient</Dropdown.Item>
-                        <Dropdown.Item href="/doctor" onClick={this.handleClickRole}>Doctor</Dropdown.Item>
+                        <Dropdown.Item className = "role" href="/patient" onClick={this.handleClickRole}>Patient</Dropdown.Item>
+                        <Dropdown.Item className = "role" href="/doctor" onClick={this.handleClickRole}>Doctor</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
                 <div>

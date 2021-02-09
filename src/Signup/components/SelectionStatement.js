@@ -12,7 +12,7 @@ export default class SelectionStatement extends React.Component{
         }
         return(
             <div>         
-                <p>The role of {userRole} has been selected</p>
+                <p className = "userrole-message" >The role of {userRole} has been selected</p>
             </div>
         )
     }
