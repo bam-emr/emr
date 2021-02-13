@@ -1,4 +1,4 @@
-# Planning and development documents for backend of EMR.
+# Planning and development documents for EMR backend
 
 ## Sequence
 
