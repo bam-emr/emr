@@ -5,6 +5,7 @@ import{
   Link
 } from "react-router-dom";
 import Doctors from "././Doctors/Doctors.js"
+import Patients from "././Patients/Patients.js"
 import Signup from "././Signup/Signup.js"
 import logo from '././images/logo.png';
 import './App.css';
@@ -58,9 +59,9 @@ export default function App() {
   );
 }
 
-function Patients(){
-  return <h2>Patients</h2>;
-}
+//function Patients(){
+//  return <h2>Patients</h2>;
+//}
 
 function Home(){
   return <h2>Home</h2>;
