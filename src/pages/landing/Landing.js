@@ -3,44 +3,31 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import uri from "../../api/endpoints";
-
 import React from "react";
+import image from "../../images/landing.png";
+import "./../../index.scss";
 
 export default function Landing() {
   return (
     <div>
-      <h2>Welcome to the future of medical record storage</h2>
-      <p>
-        Blockchain technology can be used to safely sotre confidential medical
+    <body>
+      <h2 className = "welcome">Welcome to the future of <br></br>medical record storage</h2>
+      <p className = "landing-desc">
+        Blockchain technology can be used to safely store confidential medical
         data of all forms
       </p>
-      <Button variant="contained" color="primary" href={uri.login}>
-        Login
-      </Button>
-      <Button variant="contained" color="primary" href={uri.signup}>
-        Signup
-      </Button>
-      <br />
-      <h2>Why store data with us</h2>
-      <Card color="inherit" variant="outlined">
-        <CardContent>
-          <h2> Files are backed up in our network using IPFS</h2>
-        </CardContent>
-      </Card>
-      <Card color="inherit" variant="outlined">
-        <CardContent>
-          <h2> Storage using cryptographic identifiers</h2>
-        </CardContent>
-      </Card>
-      <Card color="inherit" variant="outlined">
-        <CardContent>
-          <h2> Limits alteration to authorized parties only</h2>
-        </CardContent>
-      </Card>
-
-      <FacebookIcon />
+      {/* <Button className = "landing-signup" href={uri.signup}>
+        Login / Sign up
+      </Button> */}
+      <h2 className = "slogan">Improving medical data storage, one block at a time</h2>
+      <img className = "landing-photo" src = {image} alt = "Landing image"></img>
+      {/* <FacebookIcon />
       <TwitterIcon />
-      <LinkedInIcon />
+      <LinkedInIcon /> */}
+    </body>
+    <Button className = "landing-signup" variant="contained" color="primary"href={uri.signup}>
+        Sign up for your blockchain account 
+    </Button>
     </div>
   );
 }

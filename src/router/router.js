@@ -7,6 +7,8 @@ import login from "../pages/login";
 import signup from "../pages/signup";
 import Faq from "../pages/faq";
 import contact from "../pages/contact";
+import UserView from "../pages/users"
+//import Patient from "../pages/users/patient.js"
 import uri from "../api/endpoints";
 
 // TODO: private routes
@@ -20,6 +22,8 @@ export default function Router() {
         <Route exact path={uri.signup} component={signup} />
         <Route exact path={uri.faq} component={Faq} />
         <Route exact path={uri.contact} component={contact} />
+        <Route exact path={uri.userview} component={UserView} />
+        {/* <Route exact path={uri.patient} component={Patient} /> */}
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter>
