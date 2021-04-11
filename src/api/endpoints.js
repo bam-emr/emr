@@ -4,7 +4,7 @@ const uri = {
   signup: "/signup",
   faq: "/faq",
   contact: "/contact",
-  userview: "/users",
+  userview: "/user",
 };
 
 export default uri;
