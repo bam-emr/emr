@@ -126,7 +126,16 @@ body {
   width: 100%;
   text-align: center;
 }
-
+.search-patient{
+  position: absolute;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  color: grey;
+  font-size: 25px;
+  top: 70%;
+  width: 100%;
+  text-align: center;
+}
 .search{
   position: absolute;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -153,6 +162,11 @@ body {
   top: 10px
 }
 
+.search-button-ppk{
+  padding: 80px;
+  position: absolute;
+}
+
 .search-results{
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   color: grey;
@@ -164,6 +178,10 @@ body {
 
 .search-bar{
   padding-left: 20px;
+}
+
+.search-bar-ppk{
+  padding-top: 20px;
 }
 
 h1{
