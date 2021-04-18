@@ -7,7 +7,7 @@ import "./../../index.scss";
 
 export default function UserView() {
   return (<div>
-    {/* <Doctor/> */}
-    <Patient/>
+    <Doctor/>
+    {/* <Patient/> */}
   </div>);
 }
