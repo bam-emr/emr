@@ -7,9 +7,9 @@ body {
   background-repeat: no-repeat;
 }
 
-.welcome{
+.welcome {
   position: absolute;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
   font-size: 50px;
   top: 30%;
@@ -17,42 +17,42 @@ body {
   text-align: center;
 }
 
-.landing-desc{
+.landing-desc {
   position: absolute;
   width: 100%;
   text-align: center;
   color: white;
   font-size: 20px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   top: 55%;
 }
-.signup-title{
+.signup-title {
   font-size: 37px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   text-align: center;
 }
 
-.info-desc{
+.info-desc {
   font-size: 25px;
   text-align: center;
 }
 
-.signup-form{
-    background-color: transparent;
+.signup-form {
+  background-color: transparent;
 }
-.typed-fields{
-  display:inline-block;
+.typed-fields {
+  display: inline-block;
   opacity: 1;
 }
 
-.field{
-  display:block;
+.field {
+  display: block;
   padding: 2vh;
   align-content: center;
 }
 
-.role{
-  display:block;
+.role {
+  display: block;
   padding: 11px;
   align-content: center;
   font-family: Arial;
@@ -60,27 +60,27 @@ body {
   color: black;
 }
 
-.line-break{
+.line-break {
   padding-bottom: 2vh;
 }
 
-.centered{
+.centered {
   text-align: center;
 }
 
-.slogan{
+.slogan {
   position: absolute;
   top: 1000px;
 }
 
-.landing-photo{
+.landing-photo {
   width: 100%;
   position: absolute;
   top: 780px;
   left: 0px;
 }
 
-.landing-signup{
+.landing-signup {
   position: absolute;
   text-align: center;
   font: 40px;
@@ -88,28 +88,28 @@ body {
   border: black;
 }
 
-.logo{
+.logo {
   position: absolute;
   left: 10px;
-  top:7px;
+  top: 7px;
 }
 
-.displaying-keys1{
+.displaying-keys1 {
   padding-top: 100px;
   font-size: 20px;
   font-weight: bold;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.displaying-keys2{
+.displaying-keys2 {
   padding-top: 10px;
   font-size: 15px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.welcome-user1{
+.welcome-user1 {
   position: absolute;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: black;
   font-size: 50px;
   top: 20%;
@@ -117,18 +117,18 @@ body {
   text-align: center;
 }
 
-.welcome-user2{
+.welcome-user2 {
   position: absolute;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
   font-size: 40px;
   top: 45%;
   width: 100%;
   text-align: center;
 }
-.search-patient{
+.search-patient {
   position: absolute;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   color: grey;
   font-size: 25px;
@@ -136,9 +136,9 @@ body {
   width: 100%;
   text-align: center;
 }
-.search{
+.search {
   position: absolute;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   color: grey;
   font-size: 25px;
@@ -147,28 +147,28 @@ body {
   text-align: center;
 }
 
-.major-break{
+.major-break {
   height: 560px;
 }
 
-.minor-break{
+.minor-break {
   height: 90px;
 }
 
-.search-button{
+.search-button {
   padding: 80px;
   position: absolute;
   left: 18px;
-  top: 10px
+  top: 10px;
 }
 
-.search-button-ppk{
+.search-button-ppk {
   padding: 80px;
   position: absolute;
 }
 
-.search-results{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+.search-results {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: grey;
   font-size: 20px;
   width: 100%;
@@ -176,37 +176,53 @@ body {
   padding-left: 20px;
 }
 
-.search-bar{
+.search-bar {
   padding-left: 20px;
 }
 
-.search-bar-ppk{
+.search-bar-ppk {
   padding-top: 20px;
 }
 
-h1{
+h1 {
   width: 100%;
-
 }
 
-ol{
+ol {
   text-align: left !important;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 18px;
-  color:#009fcf;
+  color: #009fcf;
   margin-left: 30px;
 }
 
-.list{
+.list {
   margin: 10px 0;
 }
 
-hr{
-  margin-right:50px;
+hr {
+  margin-right: 50px;
   margin-left: -25px;
   width: 100%;
 }
 
-.view-button{
+.view-button {
   display: inline-block;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #009fcf;
 }

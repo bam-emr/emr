@@ -8,11 +8,9 @@ import signup from "../pages/signup";
 import Faq from "../pages/faq";
 import contact from "../pages/contact";
 import UserView from "../pages/users";
-//import Patient from "../pages/users/patient.js"
 import uri from "../api/endpoints";
 import { PrivateRoute } from "./PrivateRoute";
 
-// TODO: private routes
 export default function Router() {
   return (
     <BrowserRouter>
