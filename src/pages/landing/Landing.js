@@ -24,9 +24,6 @@ export default function Landing() {
           Blockchain technology can be used to safely store confidential medical
           data of all forms
         </p>
-        <h2 className="slogan">
-          Improving medical data storage, one block at a time
-        </h2>
         <img className="landing-photo" src={image} alt="Landing image"></img>
         {/* <FacebookIcon />
       <TwitterIcon />

@@ -89,8 +89,10 @@ export default function Patient() {
       <h1>
         <b>Your Electronic Medical Records:</b>
       </h1>
-      <br></br>
       <div className="line-break"></div>
+      <div className="line-break"></div>
+      <div className="line-break"></div>
+      <br></br>
       {getRecords()}
 
       <h1 className="search-results">
@@ -115,6 +117,7 @@ export default function Patient() {
       >
         Share Records with Doctor
       </Button>
+      <div className="line-break"></div>
     </div>
   );
 }
